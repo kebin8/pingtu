@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"  content="width=device-width, initial-scale=1.0, user-scalable=0, maximum-scale=1.0" />
+  <title>龙烟拼图互动</title>
+  <style>
+  .picture {
+    border: 1px solid black;
+  }
+  div#div1{ 
+position:fixed; 
+top:0; 
+left:0; 
+bottom:0; 
+right:0; 
+z-index:-1; 
+} 
+div#div1 > img { 
+height:100%; 
+width:100%; 
+border:0; 
+} 
+  </style>
+</head>
+<body style="height: 100%;width: 100%;margin: 0;padding: 0;">
+<!--
+  <div id="title">
+    <h2>Sliding Puzzle</h2>
+  </div>
+  <div id="slider">
+    <form>
+      <label>Easy</label>
+      <input type="range" id="scale" value="4" min="3" max="5" step="1">
+      <label>Hard</label>
+    </form>
+    <br>
+  </div>
+ -->
+  <div id="main" class="main" align="center">
+    <canvas id="puzzle" width="360px" height="360px"></canvas><br><br>
+	 <button name="bt_refresh" id="id_refresh" value="v_refresh" >重新排列</button>
+  <button name="bt_refresh" id="id_refresh" value="v_refresh" onClick="hao();" >查看排名</button><br><br>
+   <input type="hidden" id="id_jsq" value="0">  
+   <label>计时：</label>
+   <span id="clocktime">0秒</span><br><br>
+   <span id="p1">0</span><br><br>
+   <label>     计步：</label>
+   <span id="id_bushu">0</span><br><br>
+   <label>每周排名前十名的选手，\n送出2包装礼盒一份。</label><br><br>
+   <button name="bt_refresh" id="id_refresh" value="v_refresh" onClick="hao();" >炫耀一下</button>
+  </div>
+  <script src="sliding2.js"></script>
+ 
+</body>
+</html>
