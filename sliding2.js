@@ -75,19 +75,19 @@ var Timer = function() {
         var ctime1 = 0;
         var ctime2 = 0;
         if(ctime > 60) {
-          ctime1 = Number(ctime/60);
-          ctime = Number(ctime%60);
-          if(ctime1 > 60) {
-            ctime2 = Number(ctime1/60);
-            ctime1 = Number(ctime%60);
-          }
+            ctime1 = Number(ctime/60);
+            ctime = Number(ctime%60);
+            if(ctime1 > 60) {
+                ctime2 = Number(ctime1/60);
+                ctime1 = Number(ctime%60);
+            }
         }
-        var result = ""+ctime+"秒";
+        var result = "" + ctime + "秒";
         if(ctime1 > 0) {
-          result = ""+parseInt(ctime1)+"分"+result;
+            result = "" + parseInt(ctime1, 10) + "分" + result;
         }
         if(ctime2 > 0) {
-          result = ""+parseInt(ctime2)+"小时"+result;
+            result = "" + parseInt(ctime2, 10) + "小时" + result;
         }
         //result="计时："+result;
         return result;
@@ -154,7 +154,7 @@ var Puzzle = function(obj) {
         for(var k = 0; k < boradPartsRandom.length; ++k)
         {
             boradPartsRandom[k] = new Object;
-            boradPartsRandom[k].x = parseInt(k / tileCount);
+            boradPartsRandom[k].x = parseInt(k / tileCount, 10);
             boradPartsRandom[k].y = k % tileCount; 
         }
     };
